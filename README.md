@@ -70,7 +70,7 @@ call AddEmployee('Егор', 'Рожков', 'Иванович', 'male', '1999-1
 
 ## Представление
 ``` sql
-SELECT * FROM all_employees;
+SELECT * FROM detail_employees;
 ```
 Это представление показывает основную информацию об сотрудниках
 
