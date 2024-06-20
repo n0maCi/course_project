@@ -106,6 +106,8 @@ UNLOCK TABLES;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `before_employee_delete` BEFORE DELETE ON `employees` FOR EACH ROW BEGIN
     DELETE FROM personal_documents WHERE employees_id = OLD.id;
+    DELETE FROM time_tracking WHERE employees_id = OLD.id;
+    DELETE FROM salary WHERE employees_id = OLD.id;
 END */;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
